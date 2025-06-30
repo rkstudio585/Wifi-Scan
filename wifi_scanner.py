@@ -87,7 +87,7 @@ def main():
         # Truncate SSID to 20 characters, handle hidden networks
         ssid = (net['ssid'][:20] if net['ssid'] else "[Hidden]")
         strength_bars = rssi_to_bars(net['rssi'])
-        channel = freq_to_channel(net['frequency'])
+        channel = freq_to_channel(net['frequency_mhz'])
 
         # Format the output string for the table row
         print(f"{ssid:<20} {strength_bars} ({net['rssi']} dBm) {channel:>5}")
